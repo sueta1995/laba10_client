@@ -1,0 +1,11 @@
+<h3>Лабораторная работа 10</h3>
+
+<%= form_with url: '/calculates/create', data: {turbo: false} do |form| %>
+  <%= form.label :numbers, 'Введите числа через пробел:' %><br><br>
+  <%= form.text_field :numbers, id: 'calculate-text-field' %><br><br>
+  <%= form.label :mode, 'XML' %>
+  <%= form.radio_button :mode, 'xml' %><br>
+  <%= form.label :mode, 'HTML' %>
+  <%= form.radio_button :mode, 'html' %><br><br>
+  <%= form.submit 'Вычислить' %>
+<% end %>
