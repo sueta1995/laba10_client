@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
+# class of controller
 class CalculatesController < ApplicationController
-  before_action :set_numbers, only: %i[ create ]
-  
+  before_action :set_numbers, only: %i[create]
+
   include CalculatesHelper
-  
-  def new
-  end
+
+  def new; end
 
   def create
     if valid?(@numbers)
