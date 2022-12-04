@@ -23,6 +23,8 @@ module CalculatesHelper
       render xml: @xml_response
     when 'html'
       render inline: xml_transform
+    else
+      render inline: xml_transform
     end
   end
 
